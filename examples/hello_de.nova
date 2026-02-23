@@ -1,0 +1,4 @@
+use german
+x -> 7
+wenn x > 5:
+    ausgabe(x)
