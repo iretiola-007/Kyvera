@@ -88,12 +88,12 @@ For Italian:
 ---
 
 ## 4.2 Variables
-Variables can be created using a simple assignment syntax similar, but not the same as Python.
+Variables can be created using a simple assignment syntax, similar, but not the same as Python.
 
 Example:
 ```
 hensuu sai -> 18 
-// an arrow is used instead if the traditional equal sign "="
+// an arrow is used instead of the traditional equal sign "="
 ```
 
 ---
