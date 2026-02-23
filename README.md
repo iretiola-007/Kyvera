@@ -100,8 +100,9 @@ hensuu sai -> 18
 
 ## 4.3 Functions and Control Flow
 
-Functions and Control Flow features such as if...else are not yet implemented.
-They will be added in future updates.
+Functions and full Control Flow features are not yet implemented.
+For now you can only use `if...else` statements.
+Other statements will be added in future updates.
 
 ---
 
