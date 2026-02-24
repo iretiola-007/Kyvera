@@ -112,7 +112,30 @@ More built-in functions will be added over time.
 ---
 
 ## 6. Examples
-Example programs will be added as more features are implemented.
+```
+use japanese
+hensuu sai -> 18
+moshi sai > 10:
+    shutsuryoku(1)
+soredehanai:
+    shutsuryoku(0)
+```
+Here, you declare a variable `sai` and assign `18` to it
+Since strings and Boolean statements haven't been implemented, you can use numbers as placeholder for return values.
+However, if you directly compare numbers in a statement, you'll get a Boolean return value.
+Example:
+```
+use japanese
+shutsuryoku(5 > 1)
+```
+This would return true. Chain comparison is also supported. 
+Note: you can compare two values without using parentheses 
+Like in this example above. To do a chain comparison, you must encase values in parentheses as such below:
+```
+use japanese
+shutsuryoku(5 > 2 > 1)
+```
+More example programs will be added as more features are implemented.
 
 ---
 
