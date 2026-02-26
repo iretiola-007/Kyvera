@@ -49,7 +49,7 @@ python run.py hello_de.kyv
 ## 4. Syntax Overview
 
 ## 4.1 Language declaration 
-To use NovaScript, you must declare the language at the top of each `.kyv` file.
+To use Kyvera, you must declare the language at the top of each `.kyv` file.
 
 Use this to declare the language: 
 ``` 
