@@ -1,5 +1,5 @@
 
-# NovaScript 
+# Kyvera
 
 Code in your language. Think in your style. 🤏🏼
 
@@ -8,11 +8,11 @@ Code in your language. Think in your style. 🤏🏼
 ***📘 Documentation***
 ## 1. Introduction
 
-NovaScript is a lightweight programming language inspired by Python. It is built with a custom interpreter written in Python and follows a Python-like structure while introducing its own unique features.
+Kyvera is a lightweight programming language inspired by Python. It is built with a custom interpreter written in Python and follows a Python-like structure while introducing its own unique features.
 
-NovaScript’s main feature is **multi-language support**, currently supporting **Japanese, German, and Italian**, with more languages planned for future releases.
+Kyvera’s main feature is **multi-language support**, currently supporting **Japanese, German, and Italian**, with more languages planned for future releases.
 
-The goal of NovaScript is to provide a simple, flexible, and extensible language that can grow over time.
+The goal of Kyvera is to provide a simple, flexible, and extensible language that can grow over time.
 
 ---
 
@@ -25,22 +25,22 @@ The goal of NovaScript is to provide a simple, flexible, and extensible language
 ### Setup
 Clone the repository:
 ```
-git clone https://github.com/iretiola-007/novascript.git
-cd novascript
+git clone https://github.com/iretiola-007/kyvera.git
+cd kyvera
 ```
 
 ---
 
 
 ## 3. Getting Started
-To run a `.nova` file:
+To run a `.kyv` file:
 ```
-python run.py filename.nova
+python run.py filename.kyv
 ```
 
 Example: 
 ```
-python run.py hello_de.nova
+python run.py hello_de.kyv
 ```
 
 ---
@@ -49,7 +49,7 @@ python run.py hello_de.nova
 ## 4. Syntax Overview
 
 ## 4.1 Language declaration 
-To use NovaScript, you must declare the language at the top of each `.nova` file.
+To use NovaScript, you must declare the language at the top of each `.kyv` file.
 
 Use this to declare the language: 
 ``` 
@@ -65,7 +65,7 @@ Only that language’s keywords can be used in the file.
 ---
 
 ### 4.3 Keywords
-NovaScript currently supports basic keywords and built-in commands.
+Kyvera currently supports basic keywords and built-in commands.
 
 🇯🇵 Japanese: 
 - `hensuu` - variable declaration
@@ -90,7 +90,7 @@ NovaScript currently supports basic keywords and built-in commands.
 ## 4.2 Variables
 Variables use a simple assignment style similar to Python, but with a different operator.
 
-NovaScript uses `->` instead of `=`.
+Kyvera uses `->` instead of `=`.
 
 Example:
 ```
@@ -100,19 +100,19 @@ hensuu sai -> 18
 ---
 
 ## 4.3 Functions and Control Flow
-Currently, NovaScript supports basic `if` and `else` statements in language mode.
+Currently, Kyvera supports basic `if` and `else` statements in language mode.
 More advanced control flow features (*like loops*) will be added in future updates.
 
 ---
 
 ## 5. Built-in Functions
-NovaScript currently includes basic built-in functionality such as the shutsuryok statement (*in English, it's the print function*).
+Kyvera currently includes basic built-in functionality such as the shutsuryok statement (*in English, it's the print function*).
 More built-in functions will be added over time.
 
 ---
 
 ## 6. Examples
-`file.nova`
+`file.kyv`
 ```
 use japanese
 hensuu sai -> 18
@@ -147,13 +147,13 @@ Planned features include:
 - More built-in functions
 - Expanded multi-language support
 - Improved error handling
-- String support (*currently NovaScript only supports numbers*)
+- String support (*currently Kyvera only supports numbers*)
 
 ---
 
 ## 📝 Note
-This README will be updated as NovaScript evolves and new features are added.
-Thank you for using NovaScript.
+This README will be updated as Kyvera evolves and new features are added.
+Thank you for using Kyvera.
 
 If you find this project interesting, consider starring the repository.
 
