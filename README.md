@@ -142,6 +142,8 @@ More example programs will be added as more features are implemented.
 
 ## 7. Future Improvements
 Planned features include:
+- Advanced conditional features
+- Function definitions
 - Loops
 - More built-in functions
 - Expanded multi-language support
