@@ -1,0 +1,12 @@
+use japanese
+
+hensuu score -> 75
+
+moshi score >= 90:
+    shutsuryoku(1)
+
+soredehanai:
+    moshi score >= 60:
+        shutsuryoku(2)
+    soredehanai:
+        shutsuryoku(3)

@@ -6,7 +6,7 @@ from kyvera.core.interpreter import Interpreter
 
 
 def extract_language(code):
-    lines = [line.strip() for line in code.split("\n") if line.strip()]
+    lines = [line for line in code.split("\n") if line.strip()]
 
     if not lines[0].startswith("use "):
         raise Exception("Kyvera requires 'use <language>' at the top.")
@@ -14,7 +14,6 @@ def extract_language(code):
     _, lang_name = lines[0].split()
 
     return lang_name.lower(), "\n".join(lines[1:])
-        
 
 
 def main():
@@ -35,14 +34,13 @@ def main():
 
     interpreter = Interpreter()
     interpreter.interpret(ast)
-    
+
     DEBUG = False
 
     tokens = lexer.tokenize()
 
     if DEBUG:
         print(tokens)
-    
 
 
 if __name__ == "__main__":
