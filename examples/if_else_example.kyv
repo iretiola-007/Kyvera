@@ -1,0 +1,9 @@
+use japanese
+
+hensuu sai -> 18
+
+moshi sai > 10:
+    shutsuryoku(1)
+
+soredehanai:
+    shutsuryoku(0)

@@ -1,0 +1,9 @@
+use german
+
+zahl temperatur -> 5
+
+wenn temperatur > 0:
+    ausgabe(1)
+
+sonst:
+    ausgabe(0)

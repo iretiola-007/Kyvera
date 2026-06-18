@@ -15,6 +15,13 @@ class Parser:
         self.tokens = tokens
         self.position = 0
 
+    def not_eof(self):
+        """
+        Returns whether we are still in the range of the token list
+        """
+
+        return self.position < len(self.tokens)
+
     def parse(self):
         statements = []
 
@@ -85,12 +92,18 @@ class Parser:
             expr_tokens.append(self.tokens[self.position])
             self.position += 1
 
+        self.position += 1  # advance past the NEWLINE token.
+
         condition = self.parse_expression(expr_tokens)
+
         body = []
         else_body = []
 
         # Handle indentation (basic version)
-        if self.position < len(self.tokens) and self.tokens[self.position][0] == "INDENT":
+        if (
+            self.position < len(self.tokens)
+            and self.tokens[self.position][0] == "INDENT"
+        ):
             self.position += 1
             while self.tokens[self.position][0] != "DEDENT":
                 token_type, token_value = self.tokens[self.position]
@@ -102,6 +115,21 @@ class Parser:
                     self.position += 1
             self.position += 1  # skip DEDENT
 
+        if self.tokens[self.position][0] == "ELSE":
+            self.position += 1
+
+            while self.tokens[self.position][0] != "DEDENT":
+                tok_type, value = self.tokens[self.position]
+                if tok_type == "VAR":
+                    else_body.append(self.parse_variable())
+                elif tok_type == "PRINT":
+                    else_body.append(self.parse_print())
+                elif tok_type == "IF":
+                    else_body.append(self.parse_if())
+                else:
+                    self.position += 1
+
+            self.position += 1  # skip DEDENT
         return IfNode(condition, body, else_body)
 
     # -----------------------
@@ -138,10 +166,9 @@ class Parser:
         left = self.parse_term()
         comparisons = []
 
-        while (
-            self.expr_pos < len(self.expr_tokens)
-            and self.expr_tokens[self.expr_pos][1] in ("==", "!=", ">", "<", ">=", "<=")
-        ):
+        while self.expr_pos < len(self.expr_tokens) and self.expr_tokens[self.expr_pos][
+            1
+        ] in ("==", "!=", ">", "<", ">=", "<="):
             op = self.expr_tokens[self.expr_pos][1]
             self.expr_pos += 1
             right = self.parse_term()
@@ -159,10 +186,9 @@ class Parser:
 
     def parse_term(self):
         node = self.parse_factor()
-        while (
-            self.expr_pos < len(self.expr_tokens)
-            and self.expr_tokens[self.expr_pos][1] in ("+", "-")
-        ):
+        while self.expr_pos < len(self.expr_tokens) and self.expr_tokens[self.expr_pos][
+            1
+        ] in ("+", "-"):
             op = self.expr_tokens[self.expr_pos][1]
             self.expr_pos += 1
             right = self.parse_factor()
@@ -179,10 +205,9 @@ class Parser:
 
         node = self.parse_atom()
 
-        while (
-            self.expr_pos < len(self.expr_tokens)
-            and self.expr_tokens[self.expr_pos][1] in ("*", "/")
-        ):
+        while self.expr_pos < len(self.expr_tokens) and self.expr_tokens[self.expr_pos][
+            1
+        ] in ("*", "/"):
             op = self.expr_tokens[self.expr_pos][1]
             self.expr_pos += 1
             right = self.parse_atom()
