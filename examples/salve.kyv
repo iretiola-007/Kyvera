@@ -1,11 +1,3 @@
-<<<<<<< HEAD
 use german
 
 ausgabe("nome")
-=======
-use italian
-
-variabile nome -> "Iretiola"
-stampa(nome)
-stampa 5 + 4
->>>>>>> c5d6ec72ac4d610ae9c4d4cf698623e5828b36f8
